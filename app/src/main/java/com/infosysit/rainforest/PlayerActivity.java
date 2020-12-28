@@ -185,9 +185,9 @@ public class PlayerActivity extends AppCompatActivity implements ConnectivityRec
         JsonObject contentData = new JsonObject();
         JsonParser jsonParserObj = new JsonParser();
         JsonArray continueLearningTelemetryjson = new JsonArray();
-        //Log.d("loadPlayer","PinchZoom "+String.valueOf(pinchRequied(Constants.contentMeta.get("mimeType").getAsString())));
+        //Log.d("loadPlayer","PinchZoom "+String.valueOf(pinchRequired(Constants.contentMeta.get("mimeType").getAsString())));
         //Log.d("loadPlayer",Constants.contentMeta.get("mimeType").getAsString());
-//        if(pinchRequied(Constants.contentMeta.get("mimeType").getAsString())){
+//        if(pinchRequired(Constants.contentMeta.get("mimeType").getAsString())){
 //
 //            playerWebView.getSettings().setBuiltInZoomControls(true);
 //            playerWebView.getSettings().setDisplayZoomControls(false);
@@ -444,7 +444,7 @@ public class PlayerActivity extends AppCompatActivity implements ConnectivityRec
         startService(intent);
     }
 
-    private Boolean pinchRequied(String mimeType){
+    private Boolean pinchRequired(String mimeType){
         Boolean isPinchZoom = false;
         if(mimeType.equalsIgnoreCase("application/web-module") || mimeType.equalsIgnoreCase("application/pdf")){
             isPinchZoom = true;
